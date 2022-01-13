@@ -1,4 +1,4 @@
-module github.com/open-telemetry/opentelemetry-collector-contrib/processor/traceidextractor
+module https://github.com/AjohnsonLS/traceidextractor
 
 go 1.17
 
