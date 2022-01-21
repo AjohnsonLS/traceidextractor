@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package traceidextractor // import "github.com/open-telemetry/opentelemetry-collector-contrib/processor/traceidextractor"
+package traceidextractor // import "https://github.com/AjohnsonLS/traceidextractor"
 
 import (
 	"context"
@@ -39,7 +39,7 @@ func (a *traceidprocessor) processTraces(_ context.Context, td pdata.Traces) (pd
 			spans := ils.Spans()
 			for k := 0; k < spans.Len(); k++ {
 				span := spans.At(k)
-				span.Attributes().Insert("otlp_trace_id", pdata.NewAttributeValueString(span.TraceID().HexString()))
+				span.Attributes().Insert("otlp.trace_id", pdata.NewAttributeValueString(span.TraceID().HexString()))
 				}
 		}
 	}
